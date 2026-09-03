@@ -1,0 +1,44 @@
+# Java / Spring Boot
+/target/
+**/target/
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.tmp
+
+# Maven wrapper downloads
+.mvn/wrapper/*.jar
+
+# React / Vite frontend
+Frontend/node_modules/
+Frontend/dist/
+Frontend/build/
+Frontend/.vite/
+Frontend/coverage/
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# Uploaded app files
+product-images/*
+!product-images/.gitkeep
+
+# Environment files
+.env
+.env.*
+!.env.example
+application-local.properties
+
+# IDE / editors
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
