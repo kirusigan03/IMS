@@ -3,6 +3,7 @@ package com.smartjob.user_service.service;
 import com.smartjob.user_service.dto.CreateProfileRequest;
 import com.smartjob.user_service.dto.UpdateProfileRequest;
 import com.smartjob.user_service.entity.UserProfile;
+import com.smartjob.user_service.exception.DuplicateProfileException;
 import com.smartjob.user_service.repository.UserProfileRepository;
 import org.springframework.stereotype.Service;
 
@@ -26,7 +27,7 @@ public class UserProfileService {
     ) {
 
         if (userProfileRepository.existsByUserId(userId)) {
-            throw new RuntimeException(
+                        throw new DuplicateProfileException(
                     "Profile already exists"
             );
         }

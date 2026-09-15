@@ -8,7 +8,7 @@ import java.util.Optional;
 public interface ResumeAnalysisRepository
         extends JpaRepository<ResumeAnalysis, Long> {
 
-    Optional<ResumeAnalysis> findByResumeId(
+    Optional<ResumeAnalysis> findFirstByResumeIdOrderByCreatedAtDesc(
             Long resumeId
     );
 }

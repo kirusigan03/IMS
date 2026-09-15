@@ -35,6 +35,8 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if (authorizationHeader == null ||
                 !authorizationHeader.startsWith("Bearer ")) {
 
+                        System.out.println("[" + this.getClass().getSimpleName() + "] No/invalid Authorization header: "
+                                        + authorizationHeader);
             filterChain.doFilter(request, response);
             return;
         }

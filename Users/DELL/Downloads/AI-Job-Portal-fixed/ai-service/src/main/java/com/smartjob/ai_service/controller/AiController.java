@@ -30,7 +30,7 @@ public class AiController {
 
         ResumeAnalysis analysis =
                 analysisRepository
-                        .findByResumeId(resumeId)
+                        .findFirstByResumeIdOrderByCreatedAtDesc(resumeId)
                         .orElseThrow(() ->
                                 new RuntimeException(
                                         "Analysis not found"

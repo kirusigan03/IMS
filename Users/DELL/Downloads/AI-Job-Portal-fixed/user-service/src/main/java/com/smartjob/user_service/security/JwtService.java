@@ -64,6 +64,8 @@ public class JwtService {
 
         } catch (Exception e) {
 
+            System.out.println("[" + this.getClass().getSimpleName() + "] JWT validation failed: "
+                    + e.getClass().getSimpleName() + " - " + e.getMessage());
             return false;
         }
     }
