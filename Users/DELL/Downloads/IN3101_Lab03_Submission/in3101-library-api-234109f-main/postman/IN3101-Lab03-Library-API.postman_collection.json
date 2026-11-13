@@ -1,0 +1,119 @@
+{
+  "info": {
+    "_postman_id": "234109f-in3101-lab03-library-api",
+    "name": "IN3101 Lab 03 - Library API",
+    "description": "CRUD tests for the containerised Library API. Run after docker compose up --build -d.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Book - 234109F",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"234109F - Clean Code\",\n  \"author\": \"Robert C. Martin\",\n  \"isbn\": \"9780132350884\",\n  \"price\": 4500.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/api/books"
+      }
+    },
+    {
+      "name": "Create Book - Effective Java",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Effective Java\",\n  \"author\": \"Joshua Bloch\",\n  \"isbn\": \"9780134685991\",\n  \"price\": 5200.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/api/books"
+      }
+    },
+    {
+      "name": "Create Book - The Pragmatic Programmer",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"The Pragmatic Programmer\",\n  \"author\": \"David Thomas and Andrew Hunt\",\n  \"isbn\": \"9780135957059\",\n  \"price\": 4800.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/api/books"
+      }
+    },
+    {
+      "name": "Get All Books",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/books"
+      }
+    },
+    {
+      "name": "Get Book by ID (change 1 if needed)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/api/books/1"
+      }
+    },
+    {
+      "name": "Update Book by ID (change 1 if needed)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"234109F - Clean Code (Updated)\",\n  \"author\": \"Robert C. Martin\",\n  \"isbn\": \"9780132350884\",\n  \"price\": 4600.0\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/api/books/1"
+      }
+    },
+    {
+      "name": "Delete Book by ID (change 1 if needed)",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:8080/api/books/1"
+      }
+    }
+  ]
+}
